@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --transition-duration: 200ms;
+}
+
 html,
 body,
 #root,
@@ -13,6 +17,8 @@ body,
   height: 100%;
   width: 100%;
   @apply text-sm;
-  @apply bg-gray-500;
-  @apply text-gray-900;
+  @apply bg-white;
+  @apply dark:bg-black;
+  transition: background-color var(--transition-duration) ease-in-out,
+              color var(--transition-duration) ease-in-out;
 }
